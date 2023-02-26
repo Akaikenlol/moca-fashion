@@ -51,8 +51,8 @@ export default function Main({ layoutId }) {
 				<div className="banner__content">
 					<AnimatedLetters title=".brand" />
 					<p className="banner__message">
-						We are specialised in making things up the foundation of our brand and
-						setting our product up for success.
+						We are specialised in making things up the foundation of our brand
+						and setting our product up for success.
 					</p>
 				</div>
 				<BannerRowCenter title={"fashion"} playMarquee={playMarquee} />
@@ -60,7 +60,8 @@ export default function Main({ layoutId }) {
 				<motion.div
 					className="banner-img"
 					layoutId={layoutId}
-					transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}>
+					transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+				>
 					<div className="img-container">
 						<motion.div className="scroll-ani">
 							<Image
@@ -84,8 +85,8 @@ export default function Main({ layoutId }) {
 						</div>
 						<div className="section-1__info__content">
 							<p className="section-1__info__eng">
-								WE SOLVE ISSUES IN FASHION BUSINESSES WITH AI TECHNOLOGY AND CREATIVE TO
-								CREATE NEW WORTH WITH GLOBAL APPAREL COMPANIES.
+								WE SOLVE ISSUES IN FASHION BUSINESSES WITH AI TECHNOLOGY AND
+								CREATIVE TO CREATE NEW WORTH WITH GLOBAL APPAREL COMPANIES.
 							</p>
 							<p className="section-1__info__jp">
 								ファッションビジネスの課題をAIテクノロジーとクリエイティブで解決し、
@@ -116,14 +117,18 @@ export default function Main({ layoutId }) {
 						<div className="model-content">
 							<p>01</p>
 							<p>
-								BY GENERATING MODELS WITH OUR UNIQUE AI TECHNOLOGY, WE OFFER FASHION
-								MODELS THAT ARE PERFECTLY OPTIMISED FOR THE IDENTITY OF APPAREL BRANDS.
+								BY GENERATING MODELS WITH OUR UNIQUE AI TECHNOLOGY, WE OFFER
+								FASHION MODELS THAT ARE PERFECTLY OPTIMISED FOR THE IDENTITY OF
+								APPAREL BRANDS.
 							</p>
 							<motion.div
 								className="underline-left"
 								initial={{ scaleX: 0 }}
-								whileInView={{ scaleX: 1, transition: { duration: 0.7 } }}></motion.div>
-							<p>アパレルブランドに最適化したファッションモデルを提供します。</p>
+								whileInView={{ scaleX: 1, transition: { duration: 0.7 } }}
+							></motion.div>
+							<p>
+								アパレルブランドに最適化したファッションモデルを提供します。
+							</p>
 							<motion.a initial="initial" whileHover="hover" href="">
 								Learn More{" "}
 								<motion.span variants={hoverRotate}>
@@ -155,13 +160,14 @@ export default function Main({ layoutId }) {
 					<motion.div
 						initial={{ scaleX: 0 }}
 						whileInView={{ scaleX: 1, transition: { duration: 0.7 } }}
-						className="divider"></motion.div>
+						className="divider"
+					></motion.div>
 					<div className="section-2__content">
 						<p className="section-2__info__index">00</p>
 
 						<p className="section-2__info__eng">
-							WE SOLVE ISSUES IN FASHION BUSINESSES WITH AI TECHNOLOGY AND CREATIVE TO
-							CREATE NEW WORTH WITH GLOBAL APPAREL COMPANIES.
+							WE SOLVE ISSUES IN FASHION BUSINESSES WITH AI TECHNOLOGY AND
+							CREATIVE TO CREATE NEW WORTH WITH GLOBAL APPAREL COMPANIES.
 						</p>
 						<p className="section-2__info__jp">
 							ファッションビジネスの課題をAIテクノロジーとクリエイティブで解決し、
@@ -192,7 +198,8 @@ const BannerRowCenter = ({ title, playMarquee }) => {
 				initial={{ y: 310 }}
 				animate={{ y: 0 }}
 				transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
-				className="marquee__inner">
+				className="marquee__inner"
+			>
 				<AnimatedLetters title={title} disabled />
 				<AnimatedLetters title={title} />
 				<AnimatedLetters title={title} disabled />
@@ -209,7 +216,8 @@ const BannerRowBottom = ({ title }) => {
 				initial={{ scale: 0 }}
 				animate={{ scale: 1 }}
 				transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 1 }}
-				className="scroll">
+				className="scroll"
+			>
 				<motion.span
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
@@ -217,7 +225,8 @@ const BannerRowBottom = ({ title }) => {
 						ease: "easeInOut",
 						duration: 1,
 						delay: 1.8,
-					}}>
+					}}
+				>
 					scroll
 				</motion.span>
 				<motion.span
@@ -227,7 +236,8 @@ const BannerRowBottom = ({ title }) => {
 						ease: "easeInOut",
 						duration: 1,
 						delay: 1.8,
-					}}>
+					}}
+				>
 					down
 				</motion.span>
 			</motion.div>
@@ -241,9 +251,13 @@ const AnimatedLetters = ({ title, disabled }) => (
 		className="row-title"
 		variants={disabled ? null : banner}
 		initial="initial"
-		animate="animate">
+		animate="animate"
+	>
 		{[...title].map((letter) => (
-			<motion.span className="row-letter" variants={disabled ? null : letterAni}>
+			<motion.span
+				className="row-letter"
+				variants={disabled ? null : letterAni}
+			>
 				{letter}
 			</motion.span>
 		))}
